@@ -3,23 +3,28 @@ import axios from "axios";
 
 // get data from url
 function FetchSwapi() {
-  const [respData, setRespData] = useState([]);
-  
+  const [page, setPage] = useState([]);
+
   const didUpdate = () => {
     axios
-      .get("https://swapi.co/api/people/1/")
+      .get("https://swapi.co/api/people/")
       .then( response => {
+        setPage(response.data.results);
         console.log(response);
-        setRespData(response.data);
       })
       .catch( e => console.log("We gots problems", e));
   }
 
   useEffect(didUpdate, []);
 
-  console.log(respData);
+  
+
   return (
-    <div> here </div>
+    <div className="peopleList">
+      {page.map(person => {
+        return <h1 key={person.name}> {person.name} </h1>;
+      })}
+    </div>
   );
 
 };
