@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import PersonCard from "./PersonCard";
+
 // get data from url
 function FetchSwapi() {
   const [page, setPage] = useState([]);
@@ -20,13 +22,12 @@ function FetchSwapi() {
   
 
   return (
-    <div className="peopleList">
+    <div>
       {page.map(person => {
-        return <h1 key={person.name}> {person.name} </h1>;
+        return <PersonCard name={person.name}/>;
       })}
     </div>
-  );
-
+  )
 };
 
 export default FetchSwapi;
