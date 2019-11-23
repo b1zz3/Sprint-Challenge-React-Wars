@@ -22,9 +22,11 @@ function FetchSwapi() {
   
 
   return (
-    <div>
+    <div className="card-div">
       {page.map(person => {
-        return <PersonCard name={person.name}/>;
+        return <PersonCard name={person.name} gender={person.gender} 
+                          hair_color={person.hair_color} height={person.height} 
+                          mass={person.mass}/>;
       })}
     </div>
   )

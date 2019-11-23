@@ -1,20 +1,20 @@
 import React from "react";
-// import { Card, CardBody, Col,Row, CardTitle } from "reactstrap";
-import { ListGroup, ListGroupItem } from "reactstrap";
+import { Card, CardBody, Col,Row, CardTitle, CardSubtitle, CardText } from "reactstrap";
+
 const PersonCard = props => {
+
   return (
 
-    <ListGroup>
-      <ListGroupItem color="dark">{props.name}</ListGroupItem>
-    </ListGroup>
+    <Col sm="6">
+      <Card top width="100%" inverse style={{background: "#333" }}>
+        <CardTitle>{props.name}</CardTitle>
+        <CardBody>
+          <CardSubtitle>Height:{props.height}</CardSubtitle>
+          <CardSubtitle>Weight:{props.mass}</CardSubtitle>
+        </CardBody>
+      </Card>
+    </Col>
 
-    // <div key="props">
-    //   <Col sm="4">
-    //     <Card inverse style={{background: "#333" }}>
-    //       <CardTitle>{props.name}</CardTitle>
-    //     </Card>
-    //   </Col>
-    // </div>
   )
 }
 

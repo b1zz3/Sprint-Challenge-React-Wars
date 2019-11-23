@@ -5,3 +5,9 @@ body {
   background-image: url('./sw-bg.jpg');
   background-size: cover;
 }
+
+.card-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
