@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Button } from "reactstrap";
+import FetchSwapi from "./components/FetchSwapi";
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -12,7 +12,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <Button color="warning">test</Button>
+      <FetchSwapi/>
     </div>
   );
 }
